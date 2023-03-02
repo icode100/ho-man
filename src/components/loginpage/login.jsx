@@ -1,9 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import './login.css'
 
 
 export default function Login(props) {
-  const [stid,changestid] = useState('');
+  
+  useEffect(() => {
+    document.title = "ho-man | Login";
+  }, []);
   return (
     <>
       <div className="container">
