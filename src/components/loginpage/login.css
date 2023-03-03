@@ -20,3 +20,11 @@
     padding: 70px;
     height:50vh;
 }
+#forgot{
+    text-decoration: none;
+    color: white;
+}
+#forgot:hover{
+    text-decoration: underline;
+    color: red;
+}

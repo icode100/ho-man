@@ -21,6 +21,7 @@ export default function Login(props) {
               <label for="floatingPassword">Password</label>
             </div>
             <button class="btn btn-warning my-3" type="submit"> <ion-icon name="log-in-outline"></ion-icon></button>
+            <p ><a id='forgot' href="https://www.nitandhra.ac.in/student/auth/forgot_password">forgot credentials 😢???</a></p>
         </form>
       </div>
     </>
