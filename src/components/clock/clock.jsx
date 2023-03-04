@@ -19,7 +19,7 @@ export default function Clock() {
   return (
     <div>
       {/* <h1>Current Time:</h1> */}
-      <h2>{currentTime} {currentDate}</h2>
+      <h6>{currentTime} {currentDate}</h6>
       {/* <h1>Current Date:</h1> */}
       
     </div>

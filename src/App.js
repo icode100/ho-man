@@ -1,23 +1,76 @@
-import logo from './logo.svg';
-import './App.css';
-import Login from './components/loginpage/login'
+import "./App.css";
+import Login from "./components/loginpage/login";
+import Home from "./components/Home";
+import Error from "./error";
 import {
   createBrowserRouter,
   RouterProvider,
   Route,
   Link,
 } from "react-router-dom";
-import Nonlocal from './components/nonlocal/nonlocal';
+import Nonlocal from "./components/nonlocal/nonlocal";
+import Local from "./components/local/local";
+import Icard from "./components/icard/icard";
 
 const router = createBrowserRouter([
-  {path: "/",element: <Login/>},
-  {path:"/nonlocal",element:<Nonlocal name="Alex" roll="123456" branch="cse" sem="4" block="ABC" room="s01"/>}
+  { path: "/", element: <Login />,errorElement: <Error/> },
+  {
+    path: "/home",
+    element: <Home />,
+    children: [
+      {
+        path: "nonlocal",
+        element: (
+          <Nonlocal
+            name="Alex"
+            roll="123456"
+            branch="cse"
+            sem="4"
+            block="ABC"
+            room="s01"
+          />
+        ),
+        errorElement: <Error/>
+      },
+      {
+        path: "local",
+        element: (
+          <Local
+            name="Alex"
+            roll="123456"
+            branch="cse"
+            sem="4"
+            block="ABC"
+            room="s01"
+          />
+        ),
+        errorElement: <Error/>
+      },
+      {
+        path: "icard",
+        element: (
+          <Icard
+            name="Alex"
+            roll="123456"
+            branch="cse"
+            sem="4"
+            block="ABC"
+            room="s01"
+          />
+        ),
+        
+      },
+    ],
+    
+  },
+  {
+    path:'/err',
+    element:<Error/>
+  }
 ]);
 
 function App() {
-  return (
-    <RouterProvider router={router} />
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

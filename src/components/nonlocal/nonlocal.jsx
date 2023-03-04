@@ -1,16 +1,17 @@
 import React,{useState,useEffect} from "react";
-import Clock from '../clock/clock'
 import profpic from './profpic.png'
 export default function Nonlocal(props) {
+  
   useEffect(() => {
     document.title = "ho-man | non-local outing";
   }, []);
     let stylesheet = {
-        alignIitems: 'center',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    margin:'100px'
+        alignItems: 'center',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        margin:'10px',
+        maxWidth:'100vw'
     }
     const states = [
     'Andhra Pradesh',
@@ -55,11 +56,9 @@ export default function Nonlocal(props) {
     setDateDifference(diffInDays);
   };
   return (
-    <div className="container1" style={stylesheet} >
+    <div className="container" style={stylesheet} >
         <h2>Hi! There 👋</h2>
-        <Clock/>
-      <form className="row g-3">
-        <section className="cred" style={{alignContent:"center",justifyContent:"center",marginLeft:'35vw'}}>
+        <section className="cred" style={{display:'grid',justifyContent:'center',alignItems:'center'}}>
             <div class="card my-3" style={{width: "18rem"}}>
                 <img src={profpic} class="card-img-top" alt="..."/>
                 <div class="card-body">
@@ -74,7 +73,8 @@ export default function Nonlocal(props) {
                 </div>
             </div>
         </section>
-        <div className="col-12">
+      <form className="row">
+        <div className="col-md-12">
           <label HTMLfor="inputAddress" className="form-label">
             Address
           </label>
@@ -128,7 +128,7 @@ export default function Nonlocal(props) {
           <input type='datetime-local' value={endDate} onChange={handleEndDateChange} className="form-control" id="retdate" />
         </div>
         <p>
-          <button class="btn btn-primary" type="button" onClick={calculateDateDifference} data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+          <button class="btn btn-primary my-2" type="button" onClick={calculateDateDifference} data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
             Display rebate
           </button>
         </p>
@@ -153,8 +153,8 @@ export default function Nonlocal(props) {
           </div>
         </div>
         <div className="col-12">
-          <button type="submit" className="btn btn-primary">
-            Sign in
+          <button type="submit" className="btn btn-success">
+            Submit
           </button>
         </div>
       </form>
