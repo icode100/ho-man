@@ -29,7 +29,7 @@ export default function Login(props) {
             />
             <label for="floatingPassword">Password</label>
           </div>
-          <Link to="/Home" class="btn btn-warning my-3" type="submit">
+          <Link to="/home" class="btn btn-warning my-3" type="submit">
             {" "}
             <ion-icon name="log-in-outline"></ion-icon>
           </Link>
