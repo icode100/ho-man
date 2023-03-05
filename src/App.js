@@ -11,6 +11,7 @@ import {
 import Nonlocal from "./components/nonlocal/nonlocal";
 import Local from "./components/local/local";
 import Icard from "./components/icard/icard";
+import { PDFDownloadLink } from "@react-pdf/renderer";
 
 const router = createBrowserRouter([
   { path: "/", element: <Login />,errorElement: <Error/> },
@@ -48,15 +49,16 @@ const router = createBrowserRouter([
       },
       {
         path: "icard",
-        element: (
+        element: (<>
           <Icard
-            name="Alex"
-            roll="123456"
-            branch="cse"
-            sem="4"
-            block="ABC"
-            room="s01"
-          />
+          name="Alex"
+          roll="123456"
+          branch="cse"
+          sem="4"
+          block="ABC"
+          room="s01"
+        />
+        </>
         ),
         
       },
