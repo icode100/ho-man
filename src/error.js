@@ -9,7 +9,7 @@ export default function Error() {
           className="col-md-12"
           src={error}
           style={{ position: "absolute",display:'flex',alignContent:'center',justifyContent:'center' }}
-          
+          alt="..."
         ></img>
       </div>
     </>

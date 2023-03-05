@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function () {
+export default function Homesup() {
   return (
     <div className="container">
       <h1>Hello! NIT AP </h1>This is NIT AP Ho-Man. <br />

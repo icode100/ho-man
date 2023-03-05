@@ -45,6 +45,7 @@ export default function Navbar(props) {
             width="40"
             height="35"
             className="d-inline-block align-text-top"
+            alt="..."
           />{" "}
           Ho-Man
         </NavLink>

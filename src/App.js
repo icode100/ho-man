@@ -5,13 +5,11 @@ import Error from "./error";
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
-  Link,
+  
 } from "react-router-dom";
 import Nonlocal from "./components/nonlocal/nonlocal";
 import Local from "./components/local/local";
 import Icard from "./components/icard/icard";
-import { PDFDownloadLink } from "@react-pdf/renderer";
 
 const router = createBrowserRouter([
   { path: "/", element: <Login />,errorElement: <Error/> },

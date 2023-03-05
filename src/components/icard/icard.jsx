@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import profpic from "../nonlocal/profpic.png";
 import jsPDF from "jspdf";
 export default function Icard(props) {
@@ -27,7 +27,7 @@ export default function Icard(props) {
       }}
     >
       <div class="card ms-2 mt-2" id="icard"style={{ width: "18rem" }}>
-        <img src={profpic} class="card-img-top" />
+        <img src={profpic} class="card-img-top" alt="..." />
 
         <div class="card-body" id='cardbody'>
           <h5 className="card-title">Student Details</h5>
